@@ -1,4 +1,6 @@
 import React from 'react'
+import handshake from '../assets/handshake.svg'
+import box from '../assets/box.svg'
 
 class GoalLeadsSalesDisplay extends React.Component {
   constructor(props) {
@@ -38,13 +40,13 @@ class GoalLeadsSalesDisplay extends React.Component {
         {
           this.props.lead_amount ?
           <div>
-            <h4>Lead Conversions</h4>
+            <h4>Lead Conversions <img src={handshake} alt=""/></h4>
             <p>{this.props.lead_amount} conversions</p>
             <p>Conversion value &euro;{this.props.lead_value/100}</p>
           </div>
           :
           <div>
-            <h4>Lead Conversions</h4>
+            <h4>Lead Conversions <img src={handshake} alt=""/></h4>
             <p className="invaid-data">No data</p>
           </div>
         }
@@ -52,13 +54,13 @@ class GoalLeadsSalesDisplay extends React.Component {
         {
           this.props.sales_amount ?
             <div>
-              <h4>Sales Conversions</h4>
+              <h4>Sales Conversions <img src={box} alt=""/></h4>
               <p>{this.props.sales_amount} conversions</p>
               <p>Conversions value &euro;{this.props.sales_value/100}</p>
             </div>
           :
             <div>
-              <h4>Sales Conversions</h4>
+              <h4>Sales Conversions <img src={box} alt=""/></h4>
               <p className="invalid-data">No data</p>
             </div>
         }

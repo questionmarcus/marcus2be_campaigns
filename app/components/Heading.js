@@ -1,4 +1,5 @@
 import React from 'react'
+import marcus2beLogo from '../assets/marcus2beLogo.svg'
 
 function CampaignName(props) {
   return (

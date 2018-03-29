@@ -78,6 +78,13 @@ body {
   margin: 0px;
 }
 
+.gls-display img {
+  height:20px;
+  width: auto;
+  vertical-align: middle;
+  fill: #3c6eac;
+}
+
 .campaign-heading h1 {
   margin: 0;
   margin-bottom: 10px;
@@ -87,6 +94,11 @@ body {
 .campaign-heading {
   background: linear-gradient(to right, #3c6eac, #b8d8ff);
   color: #fff;
+}
+
+.campaign-heading img {
+  height:75px;
+  float:right;
 }
 
 .date-display {
@@ -152,7 +164,6 @@ body {
   width: 30%;
   height:40px;
   border: none;
-  text-transform: capitalize;
   border-radius: 5px;
   background-color: #3c6eac;
   color: #fff;
