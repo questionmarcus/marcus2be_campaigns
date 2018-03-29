@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../components/Heading'
 import GoalLeadsSalesDisplay from '../components/GoalLeadsSalesDisplay'
 import Reach2Interactions from '../components/Reach2Interactions'
+import CreatedUpdated from '../components/CreatedUpdated'
 
 // Dominic says these should be there own components
 // function Heading(props) {
@@ -131,6 +132,8 @@ class SingleCampaign extends React.Component {
             sales_value={this.props.data.sales_conversion_value_cents}
             updateGoal={this.props.updateGoal}/>
       </div>
+      <CreatedUpdated createdAt={this.props.data.created_at}
+          updatedAt={this.props.data.updated_at} />
       </div>
       // "capture_rate:"
       // "created_at":
