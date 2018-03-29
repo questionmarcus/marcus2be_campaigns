@@ -12,8 +12,8 @@ function StartEndDate(dates) {
   if (dates.start || dates.end) {
     return (
           <div className="date-display">
-            <div><p>{dates.start}&ndash;{dates.end}</p></div>
-            <div><p>&#40;{dates.nDays} {dates.nDays === 1 ? "day" : "days"} &#41;</p></div>
+            <div><p>{new Date(dates.start).toDateString()} &ndash; {new Date(dates.end).toDateString()}</p></div>
+            <div><p>&#40;{dates.nDays} {dates.nDays === 1 ? "day" : "days"}&#41;</p></div>
           </div>
         )
 } else {
