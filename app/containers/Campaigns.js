@@ -28,9 +28,11 @@ class Campaigns extends React.Component {
   };
 
   updateGoal( goal, id ) {
+    let updatedTime = new Date(Date.now()).toISOString()
     let updatedCampaignData = this.state.campaignData.map(( campaign ) => {
       if (campaign.id === id) {
         campaign.goal = goal
+        campaign.updated_at = updatedTime
       }
       return campaign
     })
