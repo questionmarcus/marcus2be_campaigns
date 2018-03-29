@@ -1,7 +1,7 @@
-var React = require('react')
-import Heading from './Heading'
-import GoalLeadsSalesDisplay from './GoalLeadsSalesDisplay'
-import Reach2Interactions from './Reach2Interactions'
+import React from 'react'
+import Heading from '../components/Heading'
+import GoalLeadsSalesDisplay from '../components/GoalLeadsSalesDisplay'
+import Reach2Interactions from '../components/Reach2Interactions'
 
 // Dominic says these should be there own components
 // function Heading(props) {
@@ -98,13 +98,13 @@ import Reach2Interactions from './Reach2Interactions'
 // }
 
 class SingleCampaign extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      test: 'hello'
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //
+  //   this.state = {
+  //     test: 'hello'
+  //   }
+  // }
 
   render () {
 

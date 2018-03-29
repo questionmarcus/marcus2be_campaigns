@@ -1,7 +1,7 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
-require('./index.css')
+import React from  'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-var Campaigns = require('./components/Campaigns.js')
+var Campaigns = require('./containers/Campaigns.js')
 
 ReactDOM.render(<Campaigns perPage={8} />, document.getElementById('app'))

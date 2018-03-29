@@ -13,7 +13,7 @@ function StartEndDate(dates) {
     return (
           <div className="date-display">
             <div><p>{dates.start}&ndash;{dates.end}</p></div>
-            <div><p>&#40;{dates.nDays} days&#41;</p></div>
+            <div><p>&#40;{dates.nDays} {dates.nDays === 1 ? "day" : "days"} &#41;</p></div>
           </div>
         )
 } else {

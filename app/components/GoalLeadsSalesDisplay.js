@@ -20,7 +20,6 @@ class GoalLeadsSalesDisplay extends React.Component {
             :
               <div className="goal-buttons">
                  {this.state.options.map(( option, index ) => {
-                   console.log(option)
                    return (
                      // <div>
                        // <label for={index}>{option}</label>
