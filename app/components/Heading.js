@@ -1,6 +1,10 @@
 import React from 'react'
-import marcus2beLogo from '../assets/marcus2beLogo.svg'
 
+/*
+ * Basic component that just creates a h1 tag with the campaign title
+ * but you never know... maybe you could make it more exciting.
+ * To-Do: Think about the what to do if there isn't even a title...
+ */
 function CampaignName(props) {
   return (
     <h1 className="campaign-title">
@@ -9,6 +13,12 @@ function CampaignName(props) {
   )
 }
 
+/*
+ * Function to handle start/end date display. Will take in time string and transform
+ * it to a Date object, this way there is more control over the way it is displayed.
+ * for this component, it is only using the default toDateString() function to print
+ * a far more readable date.
+ */
 function StartEndDate(dates) {
   if (dates.start || dates.end) {
     return (
@@ -26,6 +36,10 @@ function StartEndDate(dates) {
     }
 }
 
+/*
+ * (container) component that displays the heading of the campaign cards width
+ * the campaign name and start / end dates
+ */
 class Heading extends React.Component {
   constructor(props) {
     super(props)

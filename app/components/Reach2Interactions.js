@@ -1,21 +1,30 @@
 import React from 'react'
 
+/*
+ * Component to display the KPI funnel of Reach to interactions using a dynamically
+ * generated graphic using overlapping circles to display the percentage of the KPIs
+ * if no data is present, a graphic with a "?" in the middle will be displayed
+ */
 function Reach2Interactions(KPIs) {
+  // Figure constants... only need to be changed is the magnitude of KPI changes
   const figWidth = 350
   const figHeight = 200
   const mainRad = figHeight/2
+  // Set the radius of the circles by calculating the value that will create and circle with x% area
   const viewsWidth = Math.sqrt(KPIs.views/KPIs.reach*(mainRad*mainRad));
   const interactionsWidth = Math.sqrt(KPIs.interactions/KPIs.reach*(mainRad*mainRad))
+  // Set the height of the arrows for the KPIs
   const reachArrowHeight = (mainRad-viewsWidth)/2
   const viewsArrowHeight = (mainRad-(viewsWidth+interactionsWidth)/2)
+  // define valid data test (if any KPIs are null)
   let validData = KPIs.reach || KPIs.views || KPIs.interactions ? true : false
   return (
     <div className="kpi-container">
       {validData ?
         <svg
-        width={figWidth} height={figHeight}
-        viewBox="0 0 375 200" preserveAspectRatio="xMidYMid meet"
-        className="kpi-graphic">
+          width={figWidth} height={figHeight}
+          viewBox="0 0 375 200" preserveAspectRatio="xMidYMid meet"
+          className="kpi-graphic">
         <g>
           <circle cx={figHeight/2} cy={figHeight/2} r={mainRad} className="reach-graphic"/>
           <circle cx={figHeight/2} cy={figHeight/2} r={viewsWidth} className="views-graphic"/>
